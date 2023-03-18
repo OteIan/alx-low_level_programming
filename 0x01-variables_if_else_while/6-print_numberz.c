@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+/**
+ * main - main function
+ *
+ * Return: always 0
+ */
+
+int main(void)
+{
+	int a;
+
+	for (a = 0 ; a < 10 ; a++)
+		putchar(i + '0');
+	putchar('\n');
+	return (0);
+}
