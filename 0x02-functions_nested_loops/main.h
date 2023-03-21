@@ -1,20 +1,6 @@
-#include <stdio.h>
-#include <main.h>
+#ifndef MAIN_H
+#define MAIN_H
 
-/**
- * main - main function
- *
- * Return: always 0
- */
+int _putchar(char c);
 
-void printProgram(void)
-/*this prints '_putchar'*/
-{
-	printf("_putchar\n");
-}
-
-int main(void)
-{
-	printProgram();
-	return (0);
-}
+#endif
