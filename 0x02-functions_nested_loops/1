@@ -1,0 +1,15 @@
+n - main function
+  5  *
+  6  * Return: always 0
+  7  */
+  8 
+  9 void printProgram(void)
+ 10 {
+ 11         printf("_putchar\n");
+ 12 }
+ 13 
+ 14 int main(void)
+ 15 {
+ 16         printProgram();
+ 17         return (0);
+ 18 }
