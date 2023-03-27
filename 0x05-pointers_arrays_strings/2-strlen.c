@@ -8,9 +8,15 @@
 
 int _strlen(char *s)
 {
-	int length = _strlen(s);
+	int i;
+	int count = 0;
 
-	_putchar("%c", length);
+	for (i = 0 ; s[i] != '\0' ; i++)
+	{
+		count++;
+	}
+	return (count);
 
-	return (length);
+
+
 }
