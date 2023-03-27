@@ -10,5 +10,7 @@ int _strlen(char *s)
 {
 	int length = _strlen(s);
 
+	_putchar("%zu", length);
+
 	return (length);
 }
