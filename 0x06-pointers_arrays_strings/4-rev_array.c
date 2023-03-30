@@ -7,7 +7,7 @@
  * Return: always 0
  */
 
-void reverse_array(int *a, int n);
+void reverse_array(int *a, int n)
 {
 	int i;
 	int j;
