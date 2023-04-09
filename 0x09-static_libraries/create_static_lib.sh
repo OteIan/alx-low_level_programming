@@ -5,3 +5,4 @@ for c_file in "${c_files[@]}"; do
 done
 ar rcs liball.a *.c
 rm *.o
+
