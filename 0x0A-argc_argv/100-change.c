@@ -18,8 +18,8 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	i = _atoi(argv[1]);
-	result = 0;
+	i = atoi(argv[1]);
+	out = 0;
 
 	if (i < 0)
 	{
@@ -31,10 +31,10 @@ int main(int argc, char *argv[])
 	{
 		while (i >= coins[j])
 		{
-			result++;
+			out++;
 			i -= coins[j];
 		}
 	}
-	printf("%d\n", result);
+	printf("%d\n", out);
 	return (0);
 }
