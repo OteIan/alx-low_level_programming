@@ -61,10 +61,13 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
+	else
+	{
 	num1 = _atoi(argv[1]);
 	num2 = _atoi(argv[2]);
 	prod = num1 * num2;
 
 	printf("%d", prod);
 	return (0);
+	}
 }
