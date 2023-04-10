@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
 	{
 		if (check_num(argv[i]))
 		{
-			j = _atoi(argv[i]);
+			j = atoi(argv[i]);
 			sum += j;
 		}
 
