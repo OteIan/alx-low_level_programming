@@ -53,19 +53,18 @@ int _atoi(char *s)
 
 int main(int argc, char *argv[])
 {
-	int num1 = _atoi(argv[1]);
-	int num2 = _atoi(argv[2]);
-	int prod = num1 * num2;
+	int num1, num2, prod;
 
-	if (argc > 1 && argc < 4)
+	if (argc != 3)
 	{
-		printf("%d\n", prod);
-		return (0);
-	}
-	else
-	{
-		printf("Error");
+		printf("Error\n");
 		return (1);
 	}
 
+	num1 = _atoi(argv[1]);
+	num2 = _atoi(argv[2]);
+	prod = num1 * num2;
+
+	printf("%d", prod);
+	return (0);
 }
