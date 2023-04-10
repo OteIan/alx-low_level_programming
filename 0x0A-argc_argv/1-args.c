@@ -9,8 +9,9 @@
 
 int main(int argc, char *argv[] __attribute__((unused)))
 {
+	int total = argc - 1;
 
-	printf("%d\n", argc);
+	printf("%d\n", total);
 
 	return (0);
 }
