@@ -67,7 +67,7 @@ int main(int argc, char *argv[])
 	num2 = _atoi(argv[2]);
 	prod = num1 * num2;
 
-	printf("%d", prod);
+	printf("%d\n", prod);
 	return (0);
 	}
 }
