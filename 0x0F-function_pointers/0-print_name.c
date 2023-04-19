@@ -12,7 +12,7 @@ void print_name(char *name, void (*f)(char *c))
 	int i = 0;
 
 	while (name[i] != '\0')
-		f[i] = name[i];
+		f(&name[i]);
 		i++;
 
 	_putchar(f);
