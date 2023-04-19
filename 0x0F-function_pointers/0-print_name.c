@@ -7,13 +7,8 @@
  * Return: always NULL
  */
 
-void print_name(char *name, void (*f)(char *c))
+void print_name(char *name, void (*f)(char *))
 {
-	int i = 0;
-
-	while (name[i] != '\0')
-		f(&name[i]);
-		i++;
-
-	return (f);
+	if (name != NULL && f != NULL)
+		f(name);
 }
