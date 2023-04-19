@@ -15,5 +15,5 @@ void print_name(char *name, void (*f)(char *c))
 		f(&name[i]);
 		i++;
 
-	_putchar(f);
+	return (f);
 }
