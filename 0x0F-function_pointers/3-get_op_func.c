@@ -19,10 +19,11 @@ int (*get_op_func(char *s))(int, int)
 	};
 	int i = 0;
 
-	if (get_op_func && s)
+	while (i < 5)
 	{
-		while (ops[i].symbol != NULL && strcmp(ops[i].symbol, s != 0))
-			i++;
+		if (strcmp(s, ops[i].op) == 0)
+			return (ops[i].f);
+		i++;
 	}
-	return (ops[i].func);
+	return (0);
 }
