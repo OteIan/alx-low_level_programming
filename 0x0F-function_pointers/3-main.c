@@ -1,31 +1,43 @@
 #include "3-calc.h"
-
 /**
- * main - main function
- * @argc: argument count
- * @argv: argument vector
+ * main - main
+ * @argc: arg count
+ * @argv: arg array
  *
- * Return: always 0
- */
-
-int main(int argc, char *argv[])
+ * Return: int
+ *
+ **/
+int main(int argc, char **argv)
 {
-	int (*ptr)(int, int);
+	int inta, intb;
+	int (*f)(int, int);
 
 	if (argc != 4)
 	{
 		printf("Error\n");
-		exit(98);
+		return (98);
 	}
 
-	ptr = get_op_func(argv[2]);
+	f = get_op_func(argv[2]);
 
-	if (!ptr)
+	if (f == NULL)
+	{
+		printf("Error\n");
+		return (99);
+	}
+
+	if ((argv[2][0] != '+' && argv[2][0] != '-' && argv[2][0] != '/' &&
+	      argv[2][0] != '*' && argv[2][0] != '%') || strlen(argv[2]) != 1)
 	{
 		printf("Error\n");
 		exit(99);
 	}
 
-	printf("%d\n", ptr(atoi(argv[1]), atoi(argv[3])));
-	return (0);
+		inta = atoi(argv[1]);
+		intb = atoi(argv[3]);
+
+		printf("%d\n", f(inta, intb));
+
+		return (0);
+
 }

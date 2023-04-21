@@ -1,30 +1,66 @@
 #include "3-calc.h"
-
 /**
-  * get_op_func - function that selects correct function to perform opertaions
-  * @s: operater passed
-  *
-  * Return: pointer to the function that corresponds to the operater given
-  */
-int (*get_op_func(char *s))(int, int)
+ * op_add - Struct op
+ *
+ * @a: The operator
+ * @b: The function associated
+ * Return: int
+ */
+int op_add(int a, int b)
 {
-	op_t ops[] = {
-	{ "+", op_add },
-	{ "-", op_sub },
-	{ "*", op_mul },
-	{ "/", op_div },
-	{ "%", op_mod },
-	{ NULL, NULL }
-	};
-	int i = 0;
-
-	while (i < 5)
+	return (a + b);
+}
+/**
+ * op_sub - Struct op
+ *
+ * @a: The operator
+ * @b: The function associated
+ * Return: int
+ */
+int op_sub(int a, int b)
+{
+	return (a - b);
+}
+/**
+ * op_mul - Struct op
+ *
+ * @a: The operator
+ * @b: The function associated
+ * Return: int
+ */
+int op_mul(int a, int b)
+{
+	return (a * b);
+}
+/**
+ * op_div - Struct op
+ *
+ * @a: The operator
+ * @b: The function associated
+ * Return: int
+ */
+int op_div(int a, int b)
+{
+	if (b == 0)
 	{
-		if (strcmp(s, ops[i].op) == 0)
-			return (ops[i].f);
-
-		i++;
+		printf("Error\n");
+		exit(100);
 	}
-
-	return (0);
+	return (a / b);
+}
+/**
+ * op_mod - Struct op
+ *
+ * @a: The operator
+ * @b: The function associated
+ * Return: int
+ */
+int op_mod(int a, int b)
+{
+	if (b == 0)
+	{
+		printf("Error\n");
+		exit(100);
+	}
+	return (a % b);
 }
