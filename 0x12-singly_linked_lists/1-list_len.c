@@ -1,15 +1,16 @@
-#include "main.h"
+#include "lists.h"
 
 /**
- * list_len - checks number of elements in a list
- * @h: pointer to a list
+ * list_len - counts the number of elements in a list
  *
- * Return: number of elements in the list
+ * @h: pointer to the head node of the list
+ *
+ * Return: number of elements
  */
 
 size_t list_len(const list_t *h)
 {
-	int count = 0;
+	size_t count = 0;
 
 	while (h)
 	{
