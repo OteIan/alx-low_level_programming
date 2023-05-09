@@ -12,14 +12,12 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	FILE *fp; /*Pointer to a FILE object*/
-	char *buffer;/*Pointer to a block of memory that will hold 
-	the file contents*/
+	char *buffer;/*Pointer to a block of memory that will hold*/
 	ssize_t nwritten;/*Number of bytes written to stdout*/
 	ssize_t nread;/*Number of bytes read from the file*/
 
 	if (!filename) /*Check if filename is NULL*/
 		return (0);
-
 	fp = fopen(filename, "r");/*Opens the file*/
 	if (!fp)/*Check if the file cannot be opened*/
 		return (0);
@@ -49,7 +47,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		fclose(fp);
 		return (0);
 	}
-
 	free(buffer);
 	fclose(fp);
 	return (nwritten);
