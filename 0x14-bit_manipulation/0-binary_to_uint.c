@@ -15,13 +15,15 @@ unsigned int binary_to_uint(const char *b)
 
 	if (b == NULL)
 		return (0);
+	/* Calculate the length of the string */
 	while (b[length] != '\0')
 		length++;
-
+	/* Process each character in the binary string */
 	for (i = 0 ; i < length ; i++)
 	{
 		if (b[i] != '0' && b[i] != '1')
 			return (0);
+		/* Shift the result to the left and add the current bit */
 		result = (result << 1) + (b[i] - '0');
 	}
 
