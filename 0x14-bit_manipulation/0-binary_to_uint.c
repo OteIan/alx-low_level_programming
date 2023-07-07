@@ -21,6 +21,7 @@ unsigned int binary_to_uint(const char *b)
 	/* Process each character in the binary string */
 	for (i = 0 ; i < length ; i++)
 	{
+		/* Check if and of the chars is not 0 or 1 */
 		if (b[i] != '0' && b[i] != '1')
 			return (0);
 		/* Shift the result to the left and add the current bit */
