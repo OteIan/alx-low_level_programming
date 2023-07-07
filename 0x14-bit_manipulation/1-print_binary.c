@@ -10,24 +10,31 @@
 void print_binary(unsigned long int n)
 {
 	int leading = 1; /* Flag to ignore leading zeros */
-	unsigned long int pre = 1UL << (sizeof(unsigned long int) * 8 - 1);
+	/* Create a mask with the leftmost bit set */
+	unsigned long int mask = 1UL << (sizeof(unsigned long int) * 8 - 1);
 
 	if (n == 0)
 	{
 		_putchar('0');
 		return;
 	}
-
-	while (pre > 0)
+	while (mask > 0)
 	{
-		if (n & pre)
+		if (n & mask)
 		{
+			/* Print "1" if the corresponding bit is set */
 			_putchar('1');
+			/* Set the flag to ignore the leading zeros */
 			leading = 0;
 		}
 		else if (!leading)
+		{
 			_putchar('0');
-
-		pre >>= 1;
+			/**
+			 * Print "0" if corresponding bit is not set
+			 * and leading flag is cleared
+			 */
+		}
+		mask >>= 1;/* Shift the mask to the right by 1 bit */
 	}
 }
