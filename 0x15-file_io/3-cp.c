@@ -98,7 +98,7 @@ int main(int argc, char *argv[])
 		check_file_from(len_read, argv[1], fd_from, fd_to);
 
 		len_write = write(fd_to, buffer, len_read);
-		if (len_write != -1)
+		if (len_write != len_read)
 			len_write = -1;
 
 		check_file_to(len_write, argv[2], fd_from, fd_to);
