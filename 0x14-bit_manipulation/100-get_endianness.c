@@ -3,7 +3,7 @@
 /**
  * get_endianness - checks the endianness
  *
- * Return: void
+ * Return: 1 or 0
  */
 int get_endianness(void)
 {
