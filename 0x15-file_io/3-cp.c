@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 {
 	int fro, to;
 	int re, wr;
-	char *buffer = create_buffer(argv[2]);
+	char *buffer;
 
 	if (argc != 3)
 	{
@@ -20,6 +20,7 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 
+	buffer = create_buffer(argv[2]);
 	fro = open(argv[1], O_RDONLY);
 	re = read(fro, buffer, 1024);
 	to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
