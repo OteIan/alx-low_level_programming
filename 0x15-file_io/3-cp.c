@@ -11,7 +11,7 @@
 int main(int argc, char *argv[])
 {
 	int fro, to;
-	int re, wr;
+	int r, w;
 	char *buffer;
 
 	if (argc != 3)
@@ -22,25 +22,25 @@ int main(int argc, char *argv[])
 
 	buffer = create_buffer(argv[2]);
 	fro = open(argv[1], O_RDONLY);
-	re = read(fro, buffer, 1024);
+	r = read(fro, buffer, 1024);
 	to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
-	if (fro == -1 || re == -1)
+	if (fro == -1 || r == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		free(buffer);
 		exit(98);
 	}
 
-	wr = write(to, buffer, re);
-	if (to == -1 || wr == -1)
+	w = write(to, buffer, r);
+	if (to == -1 || w == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		free(buffer);
 		exit(99);
 	}
 
-	re = read(fro, buffer, 1024);
+	r = read(fro, buffer, 1024);
 	to = open(argv[2], O_WRONLY | O_APPEND);
 
 	free(buffer);
