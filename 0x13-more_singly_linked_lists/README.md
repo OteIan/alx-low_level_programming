@@ -1,9 +1,9 @@
-#README.md
+# README.md
 
-##Learning objectives
+## Learning objectives
 * How to use linked lists
 
-##Tasks
+## Tasks
 0. Print list (mandatory)
 Write a function that prints all the elements of a `listint_t` list.
 
