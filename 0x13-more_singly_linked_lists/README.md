@@ -1,6 +1,9 @@
 # README.md
 
 ## Learning objectives
+At the end of this project, you are expected to [explain to anyone](https://intranet.alxswe.com/rltoken/jL0iK5DlEbQK5eIwCNDa-g), **without the help of Google**:
+
+### General
 * How to use linked lists
 
 ## Tasks
