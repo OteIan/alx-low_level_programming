@@ -21,3 +21,4 @@ int main(int ac, char **av)
 	printf("\n(printed chars: %li)\n", n);
 	return (0);
 }
+

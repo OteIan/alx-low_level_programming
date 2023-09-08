@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * set_bit - set the value of a bit to 1
+ * set_bit - Set the value of a bit to 1
  *
  * @n: 1
  * @index: index
@@ -19,5 +19,4 @@ int set_bit(unsigned long int *n, unsigned int index)
 	*n |= mask;
 
 	return (1);
-
 }

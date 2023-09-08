@@ -34,7 +34,7 @@ int create_file(const char *filename, char *text_content)
 
 	if (text_content != NULL)
 	{
-	/* Writes 'len' number of bytes from 'text_content' to file 'fd' */
+		/* Writes 'len' number of bytes from 'text_content' to file 'fd' */
 		bytes_written = write(fd, text_content, len);
 		if (bytes_written == -1)
 		{
@@ -46,3 +46,4 @@ int create_file(const char *filename, char *text_content)
 	close(fd);
 	return (1);
 }
+

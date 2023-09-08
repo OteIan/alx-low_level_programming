@@ -87,3 +87,4 @@ void _close(int fd)
 		exit(100);
 	}
 }
+

@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * clear_bit - sets value of a bit to 0
+ * clear_bit - Sets the value of a bit to 0
  *
  * @n: 0
  * @index: index
  *
- * Return: 1 if it worked otherwise -1;
+ * Return: 1 if it worked otherwise 0
  */
 int clear_bit(unsigned long int *n, unsigned int index)
 {

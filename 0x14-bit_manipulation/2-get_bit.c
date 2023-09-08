@@ -3,10 +3,10 @@
 /**
  * get_bit - gets the bit at the given index
  *
- * @n: bit to be returned
- * @index: index to be inspected
+ * @n: Bit to be returned
+ * @index: Index to be inspected
  *
- * Return: value of bit at index or -1 if an error occured
+ * Return: Value of bit at index or -1 if an orror occured
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
@@ -18,6 +18,7 @@ int get_bit(unsigned long int n, unsigned int index)
 
 	if (n & mask)
 		return (1);
+
 	else
 		return (0);
 }
