@@ -2,10 +2,10 @@
 
 /**
  * make_hash_node - Makes a new hash node
- * 
+ *
  * @key: Pointer to the key of the node
  * @value: Pointer to the value of the node
- * 
+ *
  * Return: Pointer to the new hash node, or NULL on failure
  */
 hash_node_t *make_hash_node(const char *key, const char *value)
@@ -35,11 +35,11 @@ hash_node_t *make_hash_node(const char *key, const char *value)
 
 /**
  * hash_table_set - This adds an element to the hash table
- * 
+ *
  * @ht: Pointer to the hash table to add/update the value to
  * @key: Pointer to the key
  * @value: Pointer to the value associated with the key
- * 
+ *
  * Return: 1 if succeded, 0 otherwise
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
@@ -47,13 +47,13 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	unsigned long int index;
 	hash_node_t *current_item, *new_item = malloc(sizeof(hash_node_t));
 
-	if (ht == NULL || ht->array == NULL || ht->size == NULL ||
+	if (ht == NULL || ht->array == NULL || ht->size == 0 ||
 			key == NULL || strlen(key) == 0 || value == NULL ||
 			new_item == NULL)
 		return (0);
 
 	new_item = make_hash_node(key, value);
-	index = key_index(key, ht->size); 
+	index = key_index((const unsigned char *)key, ht->size);
 	current_item = ht->array[index];
 
 	if (current_item == NULL)
