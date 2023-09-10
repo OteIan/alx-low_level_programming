@@ -7,7 +7,7 @@
  */
 void hash_table_print(const hash_table_t *ht)
 {
-	long unsigned int i;
+	unsigned long int i;
 	unsigned char flag = 0;
 	hash_node_t *node;
 
