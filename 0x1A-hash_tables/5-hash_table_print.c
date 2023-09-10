@@ -10,7 +10,7 @@ void hash_table_print(const hash_table_t *ht)
 	unsigned long int i, count = 0, itr = 0;
 	const hash_table_t *temp = ht;
 
-	if (ht == NULL)
+	if (ht == NULL || ht->array == NULL)
 		printf("{}\n");
 
 	else
