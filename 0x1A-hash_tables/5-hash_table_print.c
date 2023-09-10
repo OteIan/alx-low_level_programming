@@ -25,9 +25,9 @@ void hash_table_print(const hash_table_t *ht)
 		printf("{");
 		for (i = 0 ; i < ht->size ; i++)
 		{
-			if (ht->array[i] != NULL)
+			node = ht->array[i];
+			if (node != NULL)
 			{
-				node = ht->array[i];
 				printf("'%s': '%s'", node->key, node->value);
 				if (itr != count - 1)
 					printf(", ");
