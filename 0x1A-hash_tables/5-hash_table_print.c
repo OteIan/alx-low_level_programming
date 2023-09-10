@@ -36,11 +36,3 @@ void hash_table_print(const hash_table_t *ht)
 		printf("}\n");
 	}
 }
-
-/**
- * 
-*/
-hash_table_t handle_collision(const hash_table_t *ht, long unsigned int index, hash_node_t *item)
-{
-
-}
