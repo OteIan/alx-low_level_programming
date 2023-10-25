@@ -24,7 +24,7 @@ def island_perimeter(grid):
                 # Side check
                 if j != 0 and grid[i][j - 1] == 1:
                     connections += 2
-    
+
     actual_Perimeter = assumed_Perimeter - connections
 
     return actual_Perimeter
