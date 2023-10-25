@@ -21,7 +21,7 @@ def island_perimeter(grid):
                 if i != 0 and grid[i - 1][j] == 1:
                     connections += 2
 
-                # Side check
+                # Left check
                 if j != 0 and grid[i][j - 1] == 1:
                     connections += 2
 
