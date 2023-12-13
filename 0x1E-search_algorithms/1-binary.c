@@ -43,7 +43,7 @@ int recursive_findElement(int *array, int start, int end, int value)
  */
 int binary_search(int *array, size_t size, int value)
 {
-	if (array == NULL)
+	if (array == NULL || size == 0)
 		return (-1);
 
 	return (recursive_findElement(array, 0, size - 1, value));
