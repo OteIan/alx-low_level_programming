@@ -19,7 +19,7 @@ int recursive_findElement(int *array, int start, int end, int value)
 		printf(", %d", array[i]);
 	printf("\n");
 
-	if (start >= end)
+	if (start >= end && array[middle] != value)
 		return (-1);
 	else if (array[middle] == value)
 		return (middle);
